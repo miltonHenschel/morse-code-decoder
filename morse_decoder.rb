@@ -24,18 +24,15 @@ def decode_word(word)
   end
 
   compound
-end
+
 
 def decode_message(message)
   string_arr = message.split('  ')
   message = ''
-
   string_arr.each do |word|
     message += decode_word(word)
     message += ' '
   end
-
   message.strip
 end
-
 puts decode_message('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
